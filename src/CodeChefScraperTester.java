@@ -14,7 +14,7 @@ public class CodeChefScraperTester {
             }
         }
         if (userDataList.isEmpty()) {
-            System.out.println("No user data found.");
+            System.out.println("No user data found!");
         }
         return userDataList;
     }

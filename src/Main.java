@@ -6,11 +6,20 @@ public class Main {
     public static void main(String[] args) {
         List<String> usernames = new ArrayList<>();
 
-        System.out.println("Enter usernames (separated by spaces):");
-        Scanner sc = new Scanner(System.in);
-        while (sc.hasNextLine()) {
-            usernames.add(sc.nextLine());
+        System.out.println("Enter number of usernames: ");
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+
+        System.out.println("Enter usernames: ");
+        for (int i = 0; i < num; i++) {
+            usernames.add(scanner.next());
         }
+
+        // Lock the user input
+        scanner.close();
+
+        // Print a loading message
+        System.out.println("Loading...");
 
         List<CodeChefScraper.UserData> userDataList = CodeChefScraperTester.scrapeUserDataList(usernames);
 

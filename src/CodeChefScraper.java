@@ -38,6 +38,9 @@ public class CodeChefScraper {
         // Create a URL
         String url = "https://www.codechef.com/users/" + username;
 
+        // Print a loading message
+        System.out.println("Extracting user data for " + username + "...");
+
         // Connect to the URL
         try {
             // jsoup is a Java library for parsing HTML
